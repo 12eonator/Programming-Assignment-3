@@ -3,7 +3,7 @@
 ## PROBLEM 1: 
 Using knowledge obtained from the experiment and demonstrations:
 
-**a. Load the corresponding .csv file into a data frame named cars using pandas**
+### **a. Load the corresponding .csv file into a data frame named cars using pandas**
 
 ![image](https://github.com/user-attachments/assets/11c4a9fb-c537-4bfa-96cd-016bd437c950)
 
@@ -14,7 +14,7 @@ cars = pd.read_csv ('cars.csv')
 cars
 ````
 
-**b. Display the first five and last five rows of the resulting cars.**
+### **b. Display the first five and last five rows of the resulting cars.**
 
 ![image](https://github.com/user-attachments/assets/6a172422-2bcc-4039-9b7f-b1215254abe9)
 
@@ -38,7 +38,7 @@ cars.tail(5)
 ## PROBLEM 2: 
 Using the dataframe cars in problem 1, extract the following information using subsetting, slicing and indexing operations.
 
-**a. Display the first five rows with odd-numbered columns (columns 1, 3, 5, 7…) of cars.**
+### **a. Display the first five rows with odd-numbered columns (columns 1, 3, 5, 7…) of cars.**
 
 ![image](https://github.com/user-attachments/assets/fe26e356-b660-45fe-9735-6029b6e671ae)
 
@@ -50,7 +50,7 @@ cars.iloc[:5, [1,3,5,7,9]]
 
 ````
 
-**b. Display the row that contains the ‘Model’ of ‘Mazda RX4’.**
+### **b. Display the row that contains the ‘Model’ of ‘Mazda RX4’.**
 ![image](https://github.com/user-attachments/assets/a72c65f3-67c9-4fb2-86dc-8e3207c9004a)
 
 Keeping things simple is the name of the game. This time, using the _.loc_ function is more ideal since the question is looking for a string condition. Using ``cars['Model'] == "Mazda RX4"``, I searched the Model collumn for an instance where Mazda RX4 is used. 
@@ -61,7 +61,7 @@ cars.loc[cars['Model'] == "Mazda RX4"]
 
 ````
 
-**c. How many cylinders (‘cyl’) does the car model ‘Camaro Z28’ have?**
+### **c. How many cylinders (‘cyl’) does the car model ‘Camaro Z28’ have?**
 
 ![image](https://github.com/user-attachments/assets/50c9f4b3-708a-461f-9aa9-f351afb27ae3)
 
@@ -73,7 +73,7 @@ cars.loc[(cars['Model'] == 'Camaro Z28'), ['Model','cyl']]
 
 ````
 
-**d. Determine how many cylinders (‘cyl’) and what gear type (‘gear’) do the car models ‘Mazda RX4 Wag’, ‘Ford Pantera L’ and ‘Honda Civic’ have.**
+### **d. Determine how many cylinders (‘cyl’) and what gear type (‘gear’) do the car models ‘Mazda RX4 Wag’, ‘Ford Pantera L’ and ‘Honda Civic’ have.**
 
 ![image](https://github.com/user-attachments/assets/d71c955e-d33a-4b18-bd42-c146f981a914)
 
@@ -83,3 +83,6 @@ This is similar to what I did the previous question, except this ask for more ro
 # D) Determine how many cylinders (‘cyl’) and what gear type (‘gear’) do the car models ‘Mazda RX4 Wag’, ‘Ford Pantera L’ and ‘Honda Civic’ have.
 cars.loc[(cars['Model'].isin(["Mazda RX4 Wag","Ford Pantera L","Honda Civic"])), ['Model','cyl', 'gear'] ]
 ````
+
+## Insights
+   The problems were relatively easy and require only a few functions. Thus, by doing things more simple, we make the job less difficult and more quick to solve. 
